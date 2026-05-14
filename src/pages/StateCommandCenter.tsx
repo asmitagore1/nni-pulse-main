@@ -69,7 +69,7 @@ const StateCommandCenter = () => {
   }, [constituencies]);
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6 px-2 pb-6 animate-in fade-in duration-500">
       {/* State Header */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div>
@@ -88,7 +88,7 @@ const StateCommandCenter = () => {
             { label: 'GRATEFUL VOTERS', value: '1.1L', color: 'text-victory' },
             { label: 'CRITICAL ALERTS', value: constituencies.filter(c => c.alerts > 0).length, color: 'text-danger' },
           ].map(kpi => (
-            <div key={kpi.label} className="gradient-card rounded-lg border border-border px-4 py-2 text-center min-w-[100px]">
+            <div className="bg-white/70 dark:bg-zinc-900/60 backdrop-blur-xl rounded-2xl border border-white/20 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 px-5 py-4 text-center min-w-[120px]">
               <div className={`text-xl font-mono font-bold font-mono-data ${kpi.color}`}>{kpi.value}</div>
               <div className="text-[9px] font-heading tracking-wider text-muted-foreground">{kpi.label}</div>
             </div>
